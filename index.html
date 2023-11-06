@@ -29,8 +29,9 @@
   var map = L.map('map', {
     center: [41.77, -72.69], // EDIT coordinates to re-center map
     zoom: 8,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
-    scrollWheelZoom: false
+    scrollWheelZoom: false   
   });
+    
  /* Add the OpenStreetMap_Mapnik layer */
   var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 9,
