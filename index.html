@@ -19,37 +19,33 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="Colin Map">EDIT map title</div>
+  <div id="map-title">Jacksons map title</div>
   <div id="map"></div>
 
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
-
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
-    center: [41.77, -72.69], // EDIT coordinates to re-center map
-    zoom: 10,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
-    scrollWheelZoom: false   
-  }); 
+    center: [41.77, -72.69], // EDIT coordinates to re-center the map
+    zoom: 9,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+    scrollWheelZoom: false
+  });
 
-  /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  var OpenStreetMap_Mapnik = L.tileLayer(
-    'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
+  /* Add the OpenStreetMap_Mapnik layer */
+  var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 9,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
   L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
   .bindPopup("Trinity College"); // EDIT pop-up text message
 
-  L.marker([41.38, -72.10]).addTo(map) // EDIT marker coordinates
+  L.marker([41.37, -72.10]).addTo(map) // EDIT marker coordinates
   .bindPopup("Conn College"); // EDIT pop-up text message
 
-  L.marker([41.55, -72.65]).addTo(map) // EDIT marker coordinates
-  .bindPopup("Wesleyan University"); // EDIT pop-up text message
-
+  L.marker([41.8077, -72.2540]).addTo(map) // EDIT marker coordinates
+  .bindPopup("University of Connecticut Storrs"); // EDIT pop-up text message
   </script>
 </body>
 </html>
